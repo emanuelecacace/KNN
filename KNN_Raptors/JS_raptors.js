@@ -63,11 +63,16 @@ function knn(rapace, dataset){    /*Funzione con cui calcoliamo le distanze da 1
         
   }
   
-  for(var i = 0; i < 5; i++){
-  
-    
-  
-  }
+  if(countsw>countw && countsw>countt && countsw>countr && countsw>countso)
+   predicted = "SW";
+  else if(countw>countsw && countw>countt && countw>countr && countw>countso)
+   predicted = "W";
+  else if (countt>countw && countt>countsw && countt>countr && countt>countso)
+   predicted = "T";
+  else if (countr>countw && countr>countt && countr>countsw && countr>countso)
+   predicted = "R";
+  else if (countso>countw && countso>countt && countso>countr && countso>countsw)
+   predicted = "SO";
 
   return predicted;
 }
